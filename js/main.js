@@ -63,6 +63,7 @@ function render() {
     return `
       <div class="${item.isDone ? "done-circle" : "notdone-circle"}" id="done-circle-id" onclick="handleDone(${index})"></div>
         <li class="${item.isDone ? "done" : "notdone"}">${item.title}
+        <br><br>
         <button onclick="handleDone(${index})">${
       item.isDone ? "NotDone" : "Done"
     } </button>
