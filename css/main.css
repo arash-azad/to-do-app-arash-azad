@@ -1,0 +1,109 @@
+*{
+  font-family: cursive;
+  font-size: large;
+}
+h1{
+  font-size: calc(30px + 1.5vw);
+  color: red;
+}
+body{
+  background-color: black;
+  padding-bottom: 20vh;
+}
+.notdone {
+  color: red;
+}
+.done {
+  text-decoration-line:line-through;
+  text-decoration-style: solid;
+  text-decoration-thickness: 5px;
+  color: red;
+  text-decoration-color: black;
+}
+.empty_alert{
+  font-size: xx-large;
+  text-align: center;
+  color: red;
+  padding: 20px;
+}
+h1{
+  text-align: center;
+}
+.write_in_it{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: fit-content;
+  border: 5px solid red;
+  border-radius: 100px;
+  height: 10vh;
+  margin-bottom: 8vh;
+}
+button{
+  background-color: black;
+  color: red;
+}
+.child-write-in-it1{
+  margin-right: 0vw;
+  width: 60vw;
+  border: 0px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+
+}
+.child-write-in-it2 {
+  width: 20vw;
+  background-color: red;
+  border: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: black;
+}
+.add-p{
+    font-size: calc(15px + 1.5vw);
+}
+.your-list{
+  border: 5px solid red;
+  width: 80vw;
+  height: fit-content;
+  margin: 0 auto;
+  box-shadow: -15px 15px 100px 5px red;
+}
+input{
+  color: red;
+  background-color: black;
+  font-size: xx-large;
+}
+ol{
+  padding: 20px;
+}
+li{
+  overflow: auto;
+  border: 4px solid red;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+.notempty-alert{
+  display: none;
+}
+.done-circle{
+  width: 25px;
+    height: 25px;
+    border: 5px solid red;
+    border-radius: 100px;
+    margin-bottom: 8px;
+    background-image: url(../img/circlesign.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.notdone-circle{
+  width: 25px;
+  height: 25px;
+  border: 5px solid red;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
