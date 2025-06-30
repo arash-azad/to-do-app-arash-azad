@@ -3,9 +3,12 @@
 // document.body.appendChild(data2);
 let root = document.getElementById("root");
 let input = document.querySelector("input");
-let btn = document.querySelector("button");
+let btn = document.getElementById("button1");
 let alert=document.getElementById("empty_alert-id");
 let circle=document.getElementById("done-circle-id");
+
+let welcome=document.getElementById("welcomeid");
+let welcomebtn=document.getElementById("welcomebtnid");
 
 // let DATA = ["Shopping", "Runnig", "Doctor"];
 let DATA = [
@@ -64,11 +67,11 @@ function render() {
       <div class="${item.isDone ? "done-circle" : "notdone-circle"}" id="done-circle-id" onclick="handleDone(${index})"></div>
         <li class="${item.isDone ? "done" : "notdone"}">${item.title}
         <br><br>
-        <button onclick="handleDone(${index})">${
+        <button id="button1" onclick="handleDone(${index})">${
       item.isDone ? "NotDone" : "Done"
     } </button>
-        <button onclick="handleDelete(${index})">Delete</button>
-        <button onclick="handleEdit(${index})">Edit</button>
+        <button id="button1" onclick="handleDelete(${index})">Delete</button>
+        <button id="button1" onclick="handleEdit(${index})">Edit</button>
         </li>
         `;
   });
@@ -80,12 +83,26 @@ btn.addEventListener('click',function(){
        alert.classList.add('notempty-alert');
       alert.classList.remove('empty_alert');
 });
-circle.addEventListener('click',function(){
-  circle.classList.toggle('notdone-circle')
-  circle.classList.toggle('done-circle')
 
+welcomebtn.addEventListener('click',function(){
+  welcome.classList.remove('welcome');
+  welcome.classList.add('hidden');
+
+  welcomebtn.classList.remove('welcome');
+  welcomebtn.classList.add('hidden');
   
-})
+  setTimeout(() => {
+  welcome.style.display = "none";
+}, 1002);
+});
+
+
+
+
+// circle.addEventListener('click',function(){
+//   circle.classList.toggle('notdone-circle')
+//   circle.classList.toggle('done-circle')
+// })
 
 // function updatedivclass(){
 //   if (DATA.length>0){
