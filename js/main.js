@@ -4,7 +4,7 @@
 let root = document.getElementById("root");
 let input = document.querySelector("input");
 let btn = document.getElementById("button1");
-let alert=document.getElementById("empty_alert-id");
+let alert1=document.getElementById("empty_alert-id");
 let circle=document.getElementById("done-circle-id");
 
 let welcome=document.getElementById("welcomeid");
@@ -25,10 +25,15 @@ let DATA = [
   //   isDone: false,
   // },
 ];
-
+let emptyinput=true;
 let isEditingMode = false;
 let IndexAsli;
 btn.addEventListener("click", function () {
+  
+if (input.value.trim() === "") {
+  alert("Your list is empty");
+}
+else {
   if (isEditingMode) {
     DATA[IndexAsli].title = input.value;
     isEditingMode = false;
@@ -38,10 +43,18 @@ btn.addEventListener("click", function () {
       isDone: false,
     };
     DATA.push(newOne);
+    emptyinput=false;
   }
-
+  
   input.value = "";
-  render();
+  render(); 
+}
+
+
+
+
+
+
 });
 
 function handleDone(index) {
@@ -78,10 +91,10 @@ function render() {
   root.innerHTML = template.join("");
 }
 render();
-
 btn.addEventListener('click',function(){
-       alert.classList.add('notempty-alert');
-      alert.classList.remove('empty_alert');
+  if(emptyinput==false){
+  alert1.classList.add('notempty-alert');
+  alert1.classList.remove('empty_alert');}
 });
 
 welcomebtn.addEventListener('click',function(){
